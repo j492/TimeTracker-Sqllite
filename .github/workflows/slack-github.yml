@@ -8,6 +8,7 @@ jobs:
       - name: send approval
         uses: creeram/workflow-slack-approver@v2.0.3
         env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           SLACK_APP_TOKEN: ${{ secrets.SLACK_APP_TOKEN }}
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           SLACK_SIGNING_SECRET: ${{ secrets.SLACK_SIGNING_SECRET }}
