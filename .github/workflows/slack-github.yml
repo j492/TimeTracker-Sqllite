@@ -6,9 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: send approval
-        uses: creeram/workflow-slack-approver@v2.0.3
-        with:
-          node-version: '24'
+        uses: varu3/slack-approval@main
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           SLACK_APP_TOKEN: ${{ secrets.SLACK_APP_TOKEN }}
