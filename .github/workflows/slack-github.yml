@@ -1,15 +1,15 @@
+name: approvaljob
+on:
+  workflow_dispatch
 jobs:
-  name: approvaljob
-  on:
-    workflow_dispatch
-  jobs:
-    step1:
-      runs-on: ubuntu-latest
-      steps:
-          name: send approval
-          uses: creeram/slack-approver@v2.0.0
-          env:
-            SLACK_APP_TOKEN: ${{ secrets.SLACK_APP_TOKEN }}
-            SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-            SLACK_SIGNING_SECRET: ${{ secrets.SLACK_SIGNING_SECRET }}
-            SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+  approval:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send approval
+        uses: creeram/slack-approver@v2.0.0
+        env:
+          SLACK_APP_TOKEN: ${{ secrets.SLACK_APP_TOKEN }}
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          SLACK_SIGNING_SECRET: ${{ secrets.SLACK_SIGNING_SECRET }}
+          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
+        timeout-minutes: 10
