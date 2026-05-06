@@ -3,7 +3,7 @@ jobs:
   on:
     workflow_dispatch
   jobs:
-    approval:
+    step1:
       runs-on: ubuntu-latest
       steps:
           name: send approval
