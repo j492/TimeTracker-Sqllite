@@ -1,6 +1,5 @@
 name: approvaljob
 on:
-  workflow_dispatch
   pull_request:
     types:
       - opened
@@ -11,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: send approval
-        uses: varu3/slack-approval@v3
+        uses: j492/slack-approvalv1.0
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           SLACK_APP_TOKEN: ${{ secrets.SLACK_APP_TOKEN }}
