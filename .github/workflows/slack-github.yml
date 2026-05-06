@@ -1,4 +1,8 @@
 jobs:
+  name: approval
+  
+  on:
+    workflow_dispatch
   approval:
     runs-on: ubuntu-latest
     steps:
