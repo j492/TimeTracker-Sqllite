@@ -1,8 +1,8 @@
 //
 //  Activity.h
 //  TimeTracker
-// 
-//  Created by jay gulati on 6/5/12.
+//  
+//  Created by jay gulati on 6/5/12. 
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
