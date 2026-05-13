@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: send approval
-        uses: j492/slack-approval@v4
+        uses: j492/slack-approval@jg-comment-close
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           SLACK_APP_TOKEN: ${{ secrets.SLACK_APP_TOKEN }}
